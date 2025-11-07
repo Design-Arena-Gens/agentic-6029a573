@@ -1,0 +1,185 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Serif Devanagari", "Noto Sans Devanagari", "Hind", serif;
+  background-color: #f4f0ff;
+  color: #1f1340;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fff6d6, transparent 60%),
+    radial-gradient(circle at bottom, #e6e5ff, transparent 70%), #f4f0ff;
+  padding: 3rem 1rem 4rem;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(960px, 100%);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(31, 19, 64, 0.12);
+  box-shadow: 0 24px 60px rgba(31, 19, 64, 0.12);
+  border-radius: 28px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.header {
+  position: relative;
+  padding: 2.8rem 3rem;
+  background: linear-gradient(145deg, #5f4ad4, #a87dff);
+  color: #fff8e7;
+}
+
+.header h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  max-width: 32rem;
+  line-height: 1.6;
+  color: rgba(255, 248, 231, 0.85);
+}
+
+.content {
+  padding: 2.5rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.scene {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.scene:nth-child(even) {
+  text-align: right;
+}
+
+.scene-title {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: #423066;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: flex-start;
+}
+
+.scene:nth-child(even) .scene-title {
+  justify-content: flex-end;
+}
+
+.scene-title span {
+  font-size: 1rem;
+  color: rgba(66, 48, 102, 0.62);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.scene-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 1.8rem;
+  border: 1px solid rgba(66, 48, 102, 0.15);
+  box-shadow: 0 16px 30px rgba(66, 48, 102, 0.12);
+  line-height: 1.9;
+  font-size: 1.1rem;
+}
+
+.dialogue {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.dialogue-line {
+  display: grid;
+  gap: 0.4rem;
+  background: rgba(95, 74, 212, 0.06);
+  border-radius: 16px;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(95, 74, 212, 0.12);
+}
+
+.dialogue-speaker {
+  font-weight: 700;
+  color: #5f4ad4;
+  letter-spacing: 0.5px;
+}
+
+.narrator {
+  background: rgba(255, 215, 141, 0.2);
+  border-color: rgba(255, 215, 141, 0.45);
+  color: #8a5c00;
+}
+
+.narrator .dialogue-speaker {
+  color: #c27b00;
+}
+
+.audio-player {
+  margin-top: 1.8rem;
+  background: rgba(66, 48, 102, 0.12);
+  border-radius: 18px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid rgba(66, 48, 102, 0.2);
+}
+
+.audio-player label {
+  font-weight: 600;
+  color: #423066;
+  letter-spacing: 0.4px;
+}
+
+.footer-note {
+  padding: 1.8rem 3rem 2.4rem;
+  background: linear-gradient(120deg, rgba(95, 74, 212, 0.08), rgba(255, 215, 141, 0.2));
+  font-size: 1rem;
+  color: rgba(31, 19, 64, 0.75);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 0.5rem 3rem;
+  }
+
+  .header,
+  .content,
+  .footer-note {
+    padding: 2rem 1.8rem;
+  }
+
+  .scene-title {
+    justify-content: flex-start;
+  }
+
+  .scene:nth-child(even) {
+    text-align: left;
+  }
+
+  .scene:nth-child(even) .scene-title {
+    justify-content: flex-start;
+  }
+}
